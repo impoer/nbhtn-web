@@ -33,7 +33,7 @@ const MainPage: React.FC = () => {
                             Welcome, {user.name || 'User'}!
                         </Typography>
                     </Box>
-                    
+
                     {isMobile ? (
                         <IconButton color="inherit" onClick={handleClick}>
                             <Avatar src={user.picture || defaultUserImage} alt="User" />
@@ -48,12 +48,12 @@ const MainPage: React.FC = () => {
                                     style={{ borderRadius: '50%', cursor: "pointer", width: "30px" }}
                                 />
                             </Box>
-                            <Button color="inherit" onClick={handleLogout} sx={{ marginLeft: '10px', marginRight: "20px" }}>
+                            {!isMobile && <Button color="inherit" onClick={handleLogout} sx={{ marginLeft: '10px', marginRight: "20px" }}>
                                 Logout
-                            </Button>
+                            </Button>}
                         </Box>
                     )}
-                    
+
                     {!isMobile && (
                         <Box sx={{
                             position: 'absolute',
