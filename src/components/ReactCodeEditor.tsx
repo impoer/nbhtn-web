@@ -50,16 +50,16 @@ Technologies`);
 
   return (
     <div style={{
-      height: isMobile ? '80vh' : '100vh',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: '#1E1E1E',
-      padding: isMobile ? '10px' : '0',
+      paddingTop: "16px",
     }}>
-      <div style={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
+      <div style={{ display: 'flex', flex: 1 }}>
         <Editor
-          height="100%"
-          width={isMobile ? '100%' : '98%'}
+          height="100vh"
+          width={isMobile ? '100%' : '90%'}
           language="customLang"
           value={code}
           theme="customTheme"
