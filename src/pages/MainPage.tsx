@@ -48,7 +48,7 @@ const MainPage: React.FC = () => {
                                     style={{ borderRadius: '50%', cursor: "pointer", width: "30px" }}
                                 />
                             </Box>
-                            {!isMobile && <Button color="inherit" onClick={handleLogout} sx={{ marginLeft: '10px', marginRight: "20px" }}>
+                            {!isMobile && <Button color="inherit" onClick={handleLogout} sx={{ marginLeft: '10px', marginRight: "40px" }}>
                                 Logout
                             </Button>}
                         </Box>
