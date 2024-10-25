@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 
 interface ErrorPopupProps {
@@ -16,10 +16,10 @@ const ErrorPopup: React.FC<ErrorPopupProps> = ({ errorMessage, duration = 5000, 
     }
   }, [errorMessage]);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
     onClose();
-  };
+  }, [onClose]);
 
   useEffect(() => {
     if (open) {

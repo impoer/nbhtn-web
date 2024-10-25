@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 
 interface SuccessPopupProps {
@@ -16,10 +16,10 @@ const SuccessPopup: React.FC<SuccessPopupProps> = ({ successMessage, duration = 
     }
   }, [successMessage]);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
     onClose();
-  };
+  }, [onClose]);
 
   useEffect(() => {
     if (open) {

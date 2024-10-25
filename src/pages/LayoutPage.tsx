@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, useMediaQuery } from '@mui/material';
+import { Box } from '@mui/material';
 import Sidebar from '../components/Sidebar';
 import { Outlet } from 'react-router-dom';
 import MainPage from './MainPage';
