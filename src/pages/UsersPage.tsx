@@ -32,9 +32,9 @@ const Users: React.FC = () => {
         };
 
         fetchUsers();
-    }, []);
+    }, [user.token]);
 
-    return <RegisteredUsers users={users}/>;
+    return loading ? "Loading" : <RegisteredUsers users={users}/>;
 };
 
 export default Users;

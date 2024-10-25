@@ -29,7 +29,7 @@ const ErrorPopup: React.FC<ErrorPopupProps> = ({ errorMessage, duration = 5000, 
 
       return () => clearTimeout(timer);
     }
-  }, [open, duration]);
+  }, [open, duration, handleClose]);
 
   return (
     <Snackbar open={open} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>

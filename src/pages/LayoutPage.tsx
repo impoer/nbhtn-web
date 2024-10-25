@@ -6,7 +6,6 @@ import MainPage from './MainPage';
 
 const Layout: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
-    const isMobile = useMediaQuery('(max-width:600px)');
 
     const toggleSidebar = () => {
         setSidebarOpen((prev) => !prev);

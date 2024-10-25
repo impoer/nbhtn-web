@@ -1,4 +1,4 @@
-import { persistor, RootState } from '../store/store';
+import { persistor } from '../store/store';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -8,12 +8,9 @@ import ChatPage from './ChatPage';
 import UsersPage from './UsersPage';
 import SettingsPage from './SettingsPage';
 import AuthPage from './AuthPage';
-import { useSelector } from 'react-redux';
 import ProtectedRoute from '../components/ProtectedRoute';
 
 function WrapperPage() {
-    const user = useSelector((state: RootState) => state.user);
-
     return (
         <BrowserRouter>
             <PersistGate loading={null} persistor={persistor}>

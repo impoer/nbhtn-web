@@ -29,7 +29,7 @@ const SuccessPopup: React.FC<SuccessPopupProps> = ({ successMessage, duration = 
 
       return () => clearTimeout(timer);
     }
-  }, [open, duration]);
+  }, [open, duration, handleClose]);
 
   return (
     <Snackbar open={open} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
