@@ -7,7 +7,6 @@ import { ULR } from '../utils';
 
 const Users: React.FC = () => {
     const [users, setUsers] = useState<UserInfo[]>([]);
-    const [loading, setLoading] = useState<Boolean>(true); 
     const user = useSelector((state: RootState) => state.user);
 
     useEffect(() => {
@@ -26,15 +25,13 @@ const Users: React.FC = () => {
                 setUsers(await response.json());
             } catch (error) {
                 console.error(error);
-            } finally {
-                setLoading(false);
             }
         };
 
         fetchUsers();
     }, [user.token]);
 
-    return loading ? "Loading" : <RegisteredUsers users={users}/>;
+    return <RegisteredUsers users={users}/>;
 };
 
 export default Users;
