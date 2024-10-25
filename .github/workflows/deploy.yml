@@ -27,12 +27,12 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      # - name: Deploy to S3
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Додає доступ до S3
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     AWS_REGION: 'us-east-1'  # Вкажіть свій регіон AWS
-      #     S3_BUCKET_NAME: 'your-s3-bucket-name'  # Вкажіть ім'я S3 бакету
-      #   run: |
-      #     aws s3 sync ./build s3://$S3_BUCKET_NAME --delete  # Завантажує зібрані файли на S3
-      #     aws s3 website s3://$S3_BUCKET_NAME --index-document index.html --error-document index.html
+      - name: Deploy to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'us-east-1'  
+          S3_BUCKET_NAME: 'nbhtn'
+        run: |
+          aws s3 sync ./build s3://$S3_BUCKET_NAME --delete
+          aws s3 website s3://$S3_BUCKET_NAME --index-document index.html --error-document index.html
