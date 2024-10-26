@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import WrapperPage from './pages/WrapperPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
