@@ -38,3 +38,26 @@ iframe#webpack-dev-server-client-overlay{display:none!important}
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для навигации */
+}
+
+.navbar .nav-link {
+  transition: color 0.3s, background-color 0.3s; /* Плавный переход */
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Цвет фона при наведении */
+}
+
+.navbar .nav-link.active {
+  font-weight: bold; /* Подсветка активного элемента */
+  border-bottom: 2px solid #ffdd57; /* Подчеркивание активного элемента */
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
