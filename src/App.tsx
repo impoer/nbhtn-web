@@ -65,7 +65,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId="your-client-id">
+    <GoogleOAuthProvider clientId="661452861668-eo85l7lnvggfhbjl2camohn7grbma1qu.apps.googleusercontent.com">
       <Provider store={store}>
         <Router>
           <AppContent />
