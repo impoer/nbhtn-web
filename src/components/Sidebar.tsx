@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaHome, FaUser, FaWallet, FaHistory, FaUserCircle } from 'react-icons/fa';
+import { FaHome, FaUser, FaWallet, FaHistory, FaUserCircle, FaSignOutAlt  } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { clearToken } from '../store/userSlice';
 
@@ -35,23 +35,23 @@ const NavigationBar: React.FC = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">
           <Nav.Link as={Link} to="/" active={location.pathname === '/'} style={{ color: 'white' }}>
-            <FaHome style={{ marginRight: '5px' }} /> Home
+            <FaHome style={{ margin: '5px' }} /> Home
           </Nav.Link>
           <Nav.Link as={Link} to="/dashboard" active={location.pathname === '/dashboard'} style={{ color: 'white' }}>
-            <FaUser style={{ marginRight: '5px' }} /> Dashboard
+            <FaUser style={{ margin: '5px' }} /> Dashboard
           </Nav.Link>
           <Nav.Link as={Link} to="/accounts" active={location.pathname === '/accounts'} style={{ color: 'white' }}>
-            <FaWallet style={{ marginRight: '5px' }} /> Accounts
+            <FaWallet style={{ margin: '5px' }} /> Accounts
           </Nav.Link>
           <Nav.Link as={Link} to="/transactions" active={location.pathname === '/transactions'} style={{ color: 'white' }}>
-            <FaHistory style={{ marginRight: '5px' }} /> Transactions
+            <FaHistory style={{ margin: '5px' }} /> Transactions
           </Nav.Link>
         </Nav>
 
         {isMobileOrTablet ? (
           // Show Logout link on mobile and tablet
           <Nav.Link onClick={handleLogout} style={{ color: 'white', marginRight: '20px' }}>
-            Logout
+            <FaSignOutAlt style={{ margin: '5px' }} /> Logout
           </Nav.Link>
         ) : (
           // Show user icon with dropdown on desktop
