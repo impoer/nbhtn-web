@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
-import { FaArrowUp, FaArrowDown, FaRegMoneyBillAlt } from 'react-icons/fa';
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import './TransactionHistory.css'; // Підключаємо CSS файл для стилізації
 
 const transactions = [
