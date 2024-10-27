@@ -1,66 +1,73 @@
 import React from 'react';
-import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
+import './Dashboard.css'; // Підключаємо CSS файл для стилізації
+import TransactionHistory from '../components/TransactionHistory';
+import MobileTopUp from '../components/MobileTopUp';
 
 const Dashboard: React.FC = () => {
   return (
     <Container fluid className="mt-4">
-      <Row>
-        <Col md={9}>
-          <h1 className="text-center">Account Overview</h1>
-          <Row className="mt-4">
-            <Col md={6}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Title>Account Balance</Card.Title>
-                  <Card.Text className="display-4">$5,000.00</Card.Text>
-                  <ProgressBar now={70} label={`70%`} />
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Title>Recent Transactions</Card.Title>
-                  <Card.Text>No recent transactions found.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+      <h1 className="text-center mb-4">Гаманець</h1>
+      <div className="grid-container">
+        {/* Картка з балансом */}
+        <Card className="grid-item balance-card shadow-sm">
+          <Card.Body>
+            <Card.Title className="text-center">Картка Тестова</Card.Title>
+            <Card.Text className="display-4 text-center">1,000.00 UAH</Card.Text>
+          </Card.Body>
+        </Card>
 
-          <Row>
-            <Col md={12}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Title>Account Summary</Card.Title>
-                  <Card.Text>
-                    <ul>
-                      <li>Checking Account: $2,500.00</li>
-                      <li>Savings Account: $2,000.00</li>
-                      <li>Investment Account: $500.00</li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+        {/* Історія транзакцій */}
+        <TransactionHistory />
 
-          <Row>
-            <Col md={12}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Upcoming Payments</Card.Title>
-                  <Card.Text>
-                    <ul>
-                      <li>Electricity Bill: $150.00 due on Oct 30</li>
-                      <li>Internet Bill: $80.00 due on Nov 5</li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+        {/* Поповнення мобільного */}
+        <MobileTopUp />
+
+        {/* Що нового у Приват24 */}
+        <Card className="grid-item news shadow-sm">
+          <Card.Body>
+            <Card.Title>Що нового у Приват24</Card.Title>
+            <Card.Text>
+              <img src="image1.png" alt="Контроль та управління фінансами" width="100%" />
+              <img src="image2.png" alt="Коментарі до переказів" width="100%" />
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        {/* Мої кредити */}
+        <Card className="grid-item my-loans shadow-sm">
+          <Card.Body>
+            <Card.Title>Мої кредити</Card.Title>
+            <Card.Text>
+              Інформація про кредити доступна в новому сервісі.
+              <Button variant="link" onClick={() => { /* Додайте логіку переходу тут */ }}>
+                Перейти
+              </Button>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        {/* Конвертор валют */}
+        <Card className="grid-item currency-converter shadow-sm">
+          <Card.Body>
+            <Card.Title>Конвертор валют</Card.Title>
+            <Card.Text>
+              <strong>USD</strong> <br />
+              Сума: 200.00 <br />
+              1 = 41.05 <br />
+              <strong>UAH</strong> <br />
+              Сума: 200.00
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        {/* Популярні шаблони */}
+        <Card className="grid-item templates shadow-sm">
+          <Card.Body>
+            <Card.Title>Популярні шаблони</Card.Title>
+            <Card.Text>Комунальні платежі: вул. Тестова, буд. 1, кв. 1, м. Тестоград</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     </Container>
   );
 };

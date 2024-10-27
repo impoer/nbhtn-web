@@ -49,7 +49,7 @@ const AuthPage: React.FC = () => {
                     localStorage.setItem('token', data.access_token);
                     sessionStorage.setItem('refreshToken', data.refresh_token);
                     dispatch(setToken(data.access_token));
-                    navigate('/dashboard');
+                    navigate('/');
                 } else {
                     setSuccessMessage('Registration completed successfully!');
                     navigate('/login');

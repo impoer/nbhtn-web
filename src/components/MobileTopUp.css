@@ -1,0 +1,7 @@
+.mobile-topup {
+    max-height: 250px; /* Висота картки */
+  }
+  
+  button {
+    width: 100%; /* Кнопка на всю ширину */
+  }

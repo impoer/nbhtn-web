@@ -1,0 +1,60 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Сховати переповнення */
+    border-radius: 0.5rem; /* Краще закруглення */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  }
+  
+  .card-body {
+    padding: 1rem; /* Додати відступи всередині картки */
+  }
+  
+  .balance-card {
+    height: 150px; /* Фіксована висота для картки з балансом */
+  }
+  
+  .transaction-history {
+    height: 220px; /* Вища висота для історії транзакцій */
+  }
+  
+  .mobile-topup {
+    height: 150px; /* Висота для поповнення мобільного */
+  }
+  
+  .news {
+    height: 200px; /* Висота для новин */
+  }
+  
+  .my-loans {
+    height: 150px; /* Висота для кредитів */
+  }
+  
+  .currency-converter {
+    height: 150px; /* Висота для конвертора валют */
+  }
+  
+  .templates {
+    height: 150px; /* Висота для шаблонів */
+  }
+  
+  .card-title {
+    overflow: hidden; /* Сховати переповнення заголовка */
+    text-overflow: ellipsis; /* Додати многоточие для переповненого тексту */
+    white-space: nowrap; /* Заборонити перенос рядка в заголовку */
+  }
+  
+  .card-text {
+    overflow: hidden; /* Сховати переповнення тексту */
+    text-overflow: ellipsis; /* Додати многоточие для переповненого тексту */
+    display: -webkit-box; /* Використання флекс-боксу для обмеження кількості рядків */
+    -webkit-line-clamp: 3; /* Обмеження на 3 рядки тексту */
+    -webkit-box-orient: vertical; /* Вертикальна орієнтація */
+  }
+  

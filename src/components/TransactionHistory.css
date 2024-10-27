@@ -1,0 +1,30 @@
+.transaction-history {
+    max-height: 220px; /* Висота картки */
+    overflow-y: auto; /* Прокрутка, якщо вміст перевищує висоту */
+  }
+  
+  .transaction-item {
+    padding: 10px 15px; /* Внутрішні відступи */
+    border-bottom: 1px solid #e9ecef; /* Роздільник між транзакціями */
+  }
+  
+  .transaction-item:last-child {
+    border-bottom: none; /* Прибрати роздільник для останнього елемента */
+  }
+  
+  .text-success {
+    color: #28a745; /* Зелений колір для позитивних транзакцій */
+  }
+  
+  .text-danger {
+    color: #dc3545; /* Червоний колір для негативних транзакцій */
+  }
+  
+  .transaction-item:hover {
+    background-color: #f8f9fa; /* Світлий фон при наведенні */
+  }
+  
+  .transaction-item > div {
+    width: 100%; /* Заповнення всього блоку */
+  }
+  
